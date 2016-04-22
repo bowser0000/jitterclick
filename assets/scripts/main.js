@@ -8,6 +8,14 @@
 		var timer,
 			remain = 60,
 			clicked = 0;
+		var highscore = localStorage.getItem("highscore");
+		if(highscore !== null){
+   			if (score > highscore) {
+				 localStorage.setItem("highscore", score );
+      			}
+		}else{
+      			localStorage.setItem("highscore", score );
+		}
 		button.addEventListener('click', function () {
 			clicker.style['display'] = 'block';
 			this.style['background-color'] = '#e00';
