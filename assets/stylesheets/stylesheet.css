@@ -1,1 +1,62 @@
-
+html, body {
+	height: 100%;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+body {
+	font-family: 'Noto Sans';
+	background-color: #222;
+	color: white;
+	text-align: center;
+}
+.container {
+	width: 36rem;
+	padding: 0 2rem;
+	margin: auto;
+	height: 100%;
+	position: relative;
+}
+.time-cont, button, .clicks-cont {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+.time-cont {
+	height: 5rem;
+	font-size: 5rem;
+	top: 25%;
+	margin-top: -5rem;
+}
+button {
+	background-color: rgb(117, 197, 79);
+	padding: 1.5rem;
+	top: 50%;
+	margin-top: -2rem;
+	font-size: 1.5rem;
+	border: 0;
+	color: inherit;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	cursor: pointer;
+	cursor: hand;
+}
+.clicks-cont {
+	height: 5rem;
+	font-size: 5rem;
+	top: 75%;
+	margin-top: -2.5rem;
+}
+.meta {
+	font-size: 2.5rem;
+}
+button:active {
+	background-color: #e00;
+}
