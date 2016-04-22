@@ -34,6 +34,7 @@ body {
 	margin-top: -5rem;
 }
 .best-cont {
+	text-align: right;
 	position: fixed;
 	right: 0;
 	top: 0;
