@@ -1,2 +1,2 @@
-# jitterclick
-Click as much as you can during one minute!
+# Jitter Click
+Click as much as you can within one minute!
