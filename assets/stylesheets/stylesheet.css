@@ -9,6 +9,7 @@ html, body {
 	-ms-user-select: none;
 	user-select: none;
 	cursor: default;
+	overflow: hidden;
 }
 body {
 	font-family: 'Noto Sans';
@@ -17,16 +18,13 @@ body {
 	text-align: center;
 }
 .container {
-	width: 36rem;
-	padding: 0 2rem;
 	margin: auto;
 	height: 100%;
 	position: relative;
+	display: none;
 }
-.time-cont, button, .clicks-cont {
+.time-cont, button, .clicks-cont, .error {
 	position: absolute;
-	left: 0;
-	right: 0;
 	width: 100%;
 }
 .time-cont {
@@ -41,12 +39,21 @@ button {
 	top: 50%;
 	margin-top: -2rem;
 	font-size: 1.5rem;
+	left: 0;
+	right: 0;
 	border: 0;
 	color: inherit;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	cursor: pointer;
-	cursor: hand;
+}
+.clicker {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 25;
+	display: none;
 }
 .clicks-cont {
 	height: 5rem;
@@ -57,6 +64,9 @@ button {
 .meta {
 	font-size: 2.5rem;
 }
-button:active {
-	background-color: #e00;
+.error {
+	top: 50%;
+	margin-top: -1.25rem;
+	height: 2.5rem;
+	font-size: 2.5rem;
 }

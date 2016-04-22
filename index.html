@@ -7,12 +7,12 @@
 		<link rel="stylesheet" href="assets/stylesheets/normalize/normalize.css">
 		<link rel="stylesheet" href="assets/stylesheets/stylesheet.css">
 		<script src="assets/scripts/main.js"></script>
-		<script src="assets/scripts/controller.js"></script>
 		<script src="assets/scripts/js.cookie/js.cookie.js"></script>
 	</head>
 	<body>
 		<div class="container">
-			<button title="Click to Start!">Start</button>
+			<button>Press to Start</button>
+			<div class="clicker"></div>
 			<div class="time-cont">
 				<span class="time">60</span>
 				<span class="meta">sec</span>
@@ -22,5 +22,8 @@
 				<span class="meta">clicks</span>
 			</div>
 		</div>
+		<noscript>
+			<div class="error">You need JavaScript to use this app!</div>
+		</noscript>
 	</body>
 </html>
