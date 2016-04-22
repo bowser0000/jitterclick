@@ -1,0 +1,72 @@
+html, body {
+	height: 100%;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+	overflow: hidden;
+}
+body {
+	font-family: 'Noto Sans', 'Open Sans', Roboto, Arial, sans-serif;
+	background-color: #222;
+	color: white;
+	text-align: center;
+}
+.container {
+	margin: auto;
+	height: 100%;
+	position: relative;
+	display: none;
+}
+.time-cont, button, .clicks-cont, .error {
+	position: absolute;
+	width: 100%;
+}
+.time-cont {
+	height: 5rem;
+	font-size: 5rem;
+	top: 25%;
+	margin-top: -5rem;
+}
+button {
+	background-color: #75C54F;
+	padding: 1.5rem;
+	top: 50%;
+	margin-top: -2rem;
+	font-size: 1.5rem;
+	left: 0;
+	right: 0;
+	border: 0;
+	color: inherit;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.clicker {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 25;
+	display: none;
+}
+.clicks-cont {
+	height: 5rem;
+	font-size: 5rem;
+	top: 75%;
+	margin-top: -2.5rem;
+}
+.meta {
+	font-size: 2.5rem;
+}
+.error {
+	top: 50%;
+	margin-top: -1.25rem;
+	height: 2.5rem;
+	font-size: 2.5rem;
+}
