@@ -35,7 +35,7 @@
 						best.innerText = clicked;
 					}
 				}
-			}, 100);
+			}, 1000);
 		});
 		clicker.addEventListener('click', function () {
 			clicked++;
