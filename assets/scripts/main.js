@@ -4,18 +4,16 @@
 		var button = d.getElementsByTagName('button')[0],
 			clicker = d.getElementsByClassName('clicker')[0],
 			time = d.getElementsByClassName('time')[0],
-			clicks = d.getElementsByClassName('clicks')[0];
+			clicks = d.getElementsByClassName('clicks')[0],
+			best = d.getElementsByClassName('best')[0];
 		var timer,
 			remain = 60,
-			clicked = 0;
-		var highscore = localStorage.getItem("highscore");
-		if(highscore !== null){
-   			if (score > highscore) {
-				 localStorage.setItem("highscore", score );
-      			}
-		}else{
-      			localStorage.setItem("highscore", score );
-		}
+			clicked = 0,
+			mostClicks = 0;
+			if (Cookies.get('best')) {
+				mostClicks = parseInt(Cookies.get('best'), 10);
+				best.innerText = mostClicks;
+			}
 		button.addEventListener('click', function () {
 			clicker.style['display'] = 'block';
 			this.style['background-color'] = '#e00';
@@ -32,6 +30,10 @@
 					clicker.style['display'] = 'none';
 					button.style['background-color'] = '#75C54F';
 					button.innerText = 'Press to Start Again';
+					if (clicked > mostClicks) {
+						Cookies.set('best', clicked);
+						best.innerText = clicked;
+					}
 				}
 			}, 1000);
 		});
